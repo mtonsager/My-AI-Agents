@@ -73,6 +73,30 @@ Full protocol: `workspace/research/dev-workflow.md`
 
 ---
 
+## File Locations — Where Everything Lives
+
+| What | Local Path | GitHub |
+|------|-----------|--------|
+| **Jarvis workspace** (identity, memory, runbooks) | `C:\Users\Matt\.openclaw\workspace\` | N/A (private) |
+| **My-AI-Agents backup** (all agent files, skills, research) | `C:\Users\Matt\My-AI-Agents\` | `mtonsager/My-AI-Agents` |
+| **KinSync app** | `C:\Users\Matt\family-coordinator\` | `mtonsager/family-coordinator` |
+| **Mission Control** | `C:\Users\Matt\mission-control\` | `mtonsager/mission-control` |
+| **mc-task.js** (task CLI) | `C:\Users\Matt\.openclaw\workspace\scripts\mc-task.js` | `My-AI-Agents/scripts/mc-task.js` |
+| **BOB_RUNBOOK.md** | `C:\Users\Matt\.openclaw\workspace\BOB_RUNBOOK.md` | `My-AI-Agents/runbooks/BOB_RUNBOOK.md` |
+| **MEMORY.md** (long-term) | `C:\Users\Matt\.openclaw\workspace\MEMORY.md` | `My-AI-Agents/memory/MEMORY.md` |
+| **SOUL.md / IDENTITY.md** | `C:\Users\Matt\.openclaw\workspace\` | `My-AI-Agents/identity/` |
+| **Agent skills** (security, perf, quality, threat) | `C:\Users\Matt\family-coordinator\.agents\skills\` | `My-AI-Agents/skills/` |
+| **R&D memos** | `C:\Users\Matt\.openclaw\workspace\rd-team\memos\` | `My-AI-Agents/docs/` |
+| **Research files** | `C:\Users\Matt\.openclaw\workspace\research\` | `My-AI-Agents/research/` |
+| **Daily notes** | `C:\Users\Matt\.openclaw\workspace\memory\YYYY-MM-DD.md` | `My-AI-Agents/memory/` (latest 3) |
+
+### KinSync Branch Rules
+- Active dev branch: `PreDeploy`
+- George branches from `PreDeploy` → `feature/KS-XXX-slug` → PR back to `PreDeploy`
+- Deploy path: `PreDeploy` → `deploy` (triggers Render) → `main`
+
+---
+
 ## How It Works
 - Matt tells Jarvis what needs to get done
 - Jarvis logs it to Mission Control and delegates to the right agent(s)
